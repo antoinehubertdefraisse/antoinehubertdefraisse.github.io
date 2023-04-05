@@ -1,7 +1,6 @@
 menu:
 - {name: 'Research', url: '/publications'}
 - {name: 'Teaching', url: '/courses'}
-- {name: 'contact', url: '/contact'}
 
 Teaching:
 - {name: 'Vector Calculus', url: 'vector-calculus'}
@@ -12,5 +11,3 @@ social:
 - {icon: 'twitter', link: 'https://twitter.com/hubert2fraisse'}
 - {icon: <i class="fa fa-envelope"></i>, link: 'https://www.hec.edu/fr/faculty-research/faculty-directory/faculty-member/hubertdefraisse-antoine'}
 
-contacts:
-- {name: 'Dr. Academia', title: 'Professor', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/contact.jpg'}
