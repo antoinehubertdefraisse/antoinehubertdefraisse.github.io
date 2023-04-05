@@ -2,12 +2,6 @@ menu:
 - {name: 'Research', url: '/publications'}
 - {name: 'Teaching', url: '/courses'}
 
-Teaching:
-- {name: 'Vector Calculus', url: 'vector-calculus'}
-- {name: 'Quantum Mechanics', url: 'quantum-mechanics'}
-- {name: 'Stellar Structures', url: 'stellar-structures'}
-
 social:
 - {icon: 'twitter', link: 'https://twitter.com/hubert2fraisse'}
-- {icon: <i class="fa fa-envelope"></i>, link: 'https://www.hec.edu/fr/faculty-research/faculty-directory/faculty-member/hubertdefraisse-antoine'}
 
