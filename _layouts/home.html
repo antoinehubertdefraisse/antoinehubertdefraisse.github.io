@@ -4,38 +4,61 @@ layout: default
 
 <!-- Strong style override so theme can't force black links -->
 <style>
-:root{
-  --bs-link-color:#1a4de6;
-  --bs-link-hover-color:#163eb8;
-  --bs-link-color-rgb:26,77,230;
-  --bs-link-hover-color-rgb:22,62,184;
+/* Default links follow theme colors */
+a {
+  color: inherit !important;
+  text-decoration: none;
+  font-weight: inherit;
 }
 
-/* Hard override in case theme specifies anchors explicitly */
-.page-content a,
-a { color:#1a4de6 !important; text-decoration:none; font-weight:450; }
-.page-content a:hover,
-a:hover,
-a:focus-visible { color:#163eb8 !important; text-decoration:underline; }
-a:visited { color:#1a4de6 !important; }
-a:active { color:#1840c8 !important; }
+/* Paper title links — bright blue + bold */
+.paper-title > a {
+  color: #1a4de6 !important;
+  font-weight: 600;
+}
+.paper-title > a:hover,
+.paper-title > a:focus-visible {
+  color: #163eb8 !important;
+  text-decoration: underline;
+}
 
-/* Title links */
-.paper-title > a { font-weight:600; color:#1a4de6 !important; }
+/* Coauthor links — slightly darker blue */
+.coauthor > a {
+  color: #1340c7 !important;
+  font-weight: 400;
+}
+.coauthor > a:hover {
+  color: #0e328f !important;
+  text-decoration: underline;
+}
 
-/* Coauthors slightly darker */
-.coauthor > a { font-weight:400; color:#1340c7 !important; }
-.coauthor > a:hover { color:#0e328f !important; text-decoration:underline; }
+/* PDF / SSRN links — blue but lighter weight */
+.aux-link {
+  color: #1a4de6 !important;
+  font-weight: 350;
+}
+.aux-link:hover {
+  color: #163eb8 !important;
+  text-decoration: underline;
+}
 
-/* PDF/SSRN slightly lighter */
-.aux-link { font-weight:350; }
-
-/* Email styled same */
-.contact-link { font-weight:450; }
+/* Email link — styled the same */
+.contact-link {
+  color: #1a4de6 !important;
+  font-weight: 450;
+}
+.contact-link:hover {
+  color: #163eb8 !important;
+  text-decoration: underline;
+}
 
 /* Keyboard accessibility */
-a:focus-visible { outline:2px solid #163eb8; outline-offset:2px; }
+a:focus-visible {
+  outline: 2px solid #163eb8;
+  outline-offset: 2px;
+}
 </style>
+
 
 <!-- Intro / About -->
 <div class="row g-5 mb-5">
