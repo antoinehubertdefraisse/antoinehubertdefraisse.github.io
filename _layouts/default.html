@@ -31,8 +31,6 @@
           </a>
         </div>
         <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-          <!-- Nav links: to add any, create _data/settings.yml with a "menu:"
-               list of {name, url} entries. Empty/absent = no nav, as now. -->
           {% for item in site.data.settings.menu %}
             <a class="me-3 py-2 text-decoration-none" href="{{ site.github.url }}{{ item.url }}">{{ item.name }}</a>
           {% endfor %}
@@ -42,7 +40,6 @@
       <footer class="pt-5 my-5 text-muted border-top">
         <div class="row">
           <div class="col-md-6 text-end social-media-icons">
-            <!-- Social icons: same file, a "social:" list of {link, icon}. -->
             {% for item in site.data.settings.social %}
               <a href="{{ item.link }}" class="ms-3 fs-5"><i class="fab fa-{{ item.icon }}"></i></a>
             {% endfor %}

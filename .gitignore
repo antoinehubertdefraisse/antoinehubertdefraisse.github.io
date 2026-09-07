@@ -12,3 +12,8 @@ _site/
 
 # Bundler, only used for local preview
 Gemfile.lock
+
+# Local-only notes and tooling — never publish these
+README.md
+.check_site.py
+.jbuild.rb
