@@ -1,0 +1,14 @@
+# macOS junk (these are what cluttered the repo before)
+.DS_Store
+**/.DS_Store
+
+# R
+.Rhistory
+
+# Jekyll local build output (never commit these)
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Bundler, only used for local preview
+Gemfile.lock

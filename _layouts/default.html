@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-  {% include head.html %}
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ site.github.url }}/assets/libs/bootstrap/bootstrap.min.css">
+    <script defer src="{{ site.github.url }}/assets/libs/fontawesome/all.min.js"></script>
+    <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.github.url }}/assets/lse-logo.png">
+    <link rel="shortcut icon" href="{{ site.github.url }}/assets/lse-logo.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3SGRZ22D5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-X3SGRZ22D5');
+    </script>
+  </head>
   <body>
     <div class="col-lg-10 mx-auto p-3 py-md-5">
-      {% include header.html %}
+      <header class="d-flex flex-column flex-md-row align-items-center pb-3 mb-5 border-bottom">
+        <div>
+          <a href="{{ site.github.url }}/" class="d-flex align-items-center text-decoration-none">
+            <span class="fs-4 fw-bold">{{ site.title }}</span>
+          </a>
+          <a href="{{ site.github.url }}/" class="d-flex align-items-center text-decoration-none">
+            <span>{{ site.description }}</span>
+          </a>
+        </div>
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+          <!-- Nav links: to add any, create _data/settings.yml with a "menu:"
+               list of {name, url} entries. Empty/absent = no nav, as now. -->
+          {% for item in site.data.settings.menu %}
+            <a class="me-3 py-2 text-decoration-none" href="{{ site.github.url }}{{ item.url }}">{{ item.name }}</a>
+          {% endfor %}
+        </nav>
+      </header>
       {{ content }}
-      {% include footer.html %}
+      <footer class="pt-5 my-5 text-muted border-top">
+        <div class="row">
+          <div class="col-md-6 text-end social-media-icons">
+            <!-- Social icons: same file, a "social:" list of {link, icon}. -->
+            {% for item in site.data.settings.social %}
+              <a href="{{ item.link }}" class="ms-3 fs-5"><i class="fab fa-{{ item.icon }}"></i></a>
+            {% endfor %}
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
